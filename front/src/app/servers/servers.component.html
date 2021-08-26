@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <app-server
+        *ngFor="let serverElement of serverElements"
+        [srvElement]="serverElement"
+        [name]="serverElement.name"
+        [content]="serverElement.content"
+        (updateClick)="onUpdateClicked($event)"
+      ></app-server>
+    </div>
+  </div>
+</div>

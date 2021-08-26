@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <label>Server Name</label>
+      <input
+        type="text"
+        class="form-control"
+        [(ngModel)]="nameInput"
+        #serverNameInput
+        (keydown)="onChange($event)">
+      <label>Server Content</label>
+      <input
+        type="text"
+        class="form-control"
+        [(ngModel)]="contactInput"
+        #serverContentInput
+        (keydown)="onChange($event)">
+      <br>
+      <button
+        class="btn btn-primary"
+        (click)="onAddServer(nameInput, contactInput)">Add Server</button>
+      <button
+        class="btn btn-primary m-3"
+        (click)="onAddBlueprint(nameInput, contactInput)">Add Server Blueprint</button>
+    </div>
+  </div>
+</div>
